@@ -1,0 +1,21 @@
+.themeSwitch {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--darkGrey);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  i {
+    position: relative;
+    bottom: 0px;
+  }
+  span {
+    font-weight: 600;
+    margin-left: 10px;
+  }
+}
+
+.themeSwitch:hover {
+  background: var(--veryLightWhite);
+}
