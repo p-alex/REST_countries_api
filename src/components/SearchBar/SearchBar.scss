@@ -1,0 +1,24 @@
+.search {
+  background: var(--white);
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+  i {
+    font-size: 1.2rem;
+    color: var(--darkGrey);
+  }
+  input {
+    outline: 0;
+    border: 0;
+    background: none;
+    margin-left: 10px;
+    width: 100%;
+    text-transform: capitalize;
+  }
+}

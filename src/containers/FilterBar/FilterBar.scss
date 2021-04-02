@@ -1,0 +1,10 @@
+.filterBar {
+  width: var(--desktopContainer);
+  margin: 20px auto;
+  @media (min-width: 1921px) {
+    width: var(--biggerContainer);
+  }
+  @media (max-width: 1440px) {
+    width: var(--mobileContainer);
+  }
+}

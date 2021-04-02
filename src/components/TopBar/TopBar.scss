@@ -1,7 +1,7 @@
 .topBar {
   position: relative;
   background-color: var(--white);
-  border-bottom: solid 4px var(--veryLightWhite);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   width: 100%;
   .topBar_container {
     position: relative;
