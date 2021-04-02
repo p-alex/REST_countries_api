@@ -40,15 +40,20 @@
         --darkGrey: hsl(0, 0%, 52%);
         --veryLightWhite: hsl(0, 0%, 95%);
         --white: hsl(0, 0%, 100%);
+        --desktopContainer: 1440px;
+        --mobileContainer: 90%;
+        --biggerContainer: 60%;
       }
 
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Nunito", sans-serif;
+        font-family: "Nunito Sans", sans-serif;
       }
-
+      body {
+        background-color: var(--veryLightWhite);
+      }
       a {
         text-decoration: none;
       }

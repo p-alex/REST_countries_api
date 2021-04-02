@@ -1,11 +1,13 @@
 import "./App.scss";
-import TopBar from "./components/TopBar/TopBar";
-
+import Homepage from "./layout/Homepage/Homepage";
+import { BrowserRouter, Route } from "react-router-dom";
 const App = () => {
   return (
-    <div className="App">
-      <TopBar />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Route path="/" exact component={Homepage}></Route>
+      </div>
+    </BrowserRouter>
   );
 };
 

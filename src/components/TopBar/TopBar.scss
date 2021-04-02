@@ -8,13 +8,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: var(--desktopContainer);
     margin: auto;
     padding: 20px 0;
-    @media (max-width: 700px) {
-      & h2 {
+    @media (max-width: 1440px) {
+      width: var(--mobileContainer);
+    }
+    @media (max-width: 600px) {
+      width: var(--mobileContainer);
+      h2 {
         font-size: 1rem;
       }
+    }
+    @media (min-width: 1921px) {
+      width: var(--biggerContainer);
     }
   }
 }

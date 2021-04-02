@@ -1,0 +1,25 @@
+.countries {
+  position: relative;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  width: var(--desktopContainer);
+  @media (max-width: 1440px) {
+    width: var(--mobileContainer);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 976px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (min-width: 1921px) {
+    width: var(--biggerContainer);
+  }
+}

@@ -1,0 +1,20 @@
+.card {
+  position: relative;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  &_image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  &_content {
+    padding: 20px;
+  }
+  &_title {
+    margin-bottom: 20px;
+  }
+}

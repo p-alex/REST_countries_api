@@ -1,4 +1,4 @@
-export default (data = {}, action) => {
+export default (data = [], action) => {
   switch (action.type) {
     case "FETCH_ALL":
       return action.payload;
