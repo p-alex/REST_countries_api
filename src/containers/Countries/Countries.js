@@ -6,15 +6,26 @@ import CountryCard from "../../components/CountryCard/CountryCard";
 export default function Countries() {
   const data = useSelector((state) => state.data);
   const search = useSelector((state) => state.search);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const [countryArray, setCountryArray] = useState([]);
   useEffect(() => {
     dispatch(fetchAll());
   }, [dispatch]);
   useEffect(() => {
-    let updatedData = data.filter((country) => country.name.includes(search));
+    let updatedData = data.filter((country) => {
+      if (filter !== "All") {
+        if (country.name.includes(search) && country.region === filter) {
+          return true;
+        }
+      } else {
+        if (country.name.includes(search)) {
+          return true;
+        }
+      }
+    });
     setCountryArray(updatedData);
-  }, [data, search]);
+  }, [data, search, filter]);
   return (
     <div className="countries">
       {countryArray.length !== 0 ? (
