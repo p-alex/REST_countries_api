@@ -5,6 +5,7 @@
   color: var(--darkGrey);
   display: flex;
   align-items: center;
+  transition: background 300ms ease-in-out;
   border-radius: 10px;
   i {
     position: relative;
@@ -14,8 +15,4 @@
     font-weight: 600;
     margin-left: 10px;
   }
-}
-
-.themeSwitch:hover {
-  background: var(--veryLightWhite);
 }

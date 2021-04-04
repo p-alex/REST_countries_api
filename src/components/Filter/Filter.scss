@@ -1,13 +1,13 @@
 .filterToggle {
   position: relative;
   cursor: pointer;
-  background: white;
   width: 255px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+  transition: background 300ms ease-in-out;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   @media (max-width: 800px) {
     width: 100%;
@@ -21,9 +21,9 @@
   border-radius: 5px;
   z-index: 100;
   padding: 20px;
-  background: white;
   width: 100%;
   top: 70px;
+  transition: background 300ms ease-in-out;
   left: 0;
   li {
     margin: 10px 0;

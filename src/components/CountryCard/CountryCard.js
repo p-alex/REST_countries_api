@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CountryCard.scss";
+import { useSelector } from "react-redux";
 export default function CountryCard({
   name,
   population,
@@ -8,8 +9,16 @@ export default function CountryCard({
   capital,
   flag,
 }) {
+  const theme = useSelector((state) => state.theme);
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={
+        theme === "Light"
+          ? { background: "var(--darkBlue)", color: "var(--white)" }
+          : { background: "var(--white)", color: "var(--darkBlue)" }
+      }
+    >
       <Link to={`/${name}`}>
         <div
           className="card_image"

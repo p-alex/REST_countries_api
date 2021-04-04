@@ -60,7 +60,7 @@
         display: block;
         color: black;
         padding: 5px 15px;
-        background: white;
+        transition: background 300ms ease-in-out;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         font-weight: 600;

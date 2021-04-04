@@ -3,6 +3,7 @@
   background-color: var(--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   width: 100%;
+  transition: background 300ms ease-in-out;
   .topBar_container {
     position: relative;
     display: flex;

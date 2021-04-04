@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { resetQuery, searchQuery } from "../../actions/search";
 import "./SearchBar.scss";
+import { useSelector } from "react-redux";
 export default function SearchBar() {
+  const theme = useSelector((state) => state.theme);
   useEffect(() => {
     return () => {
       dispatch(resetQuery());
@@ -16,7 +18,14 @@ export default function SearchBar() {
     );
   };
   return (
-    <div className="search">
+    <div
+      className="search"
+      style={
+        theme === "Light"
+          ? { background: "var(--darkBlue)", color: "var(--white)" }
+          : { background: "var(--white)", color: "var(--darkBlue)" }
+      }
+    >
       <i className="fas fa-search"></i>
       <input
         type="text"

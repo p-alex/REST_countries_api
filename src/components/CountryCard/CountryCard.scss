@@ -1,10 +1,10 @@
 .card {
   position: relative;
   width: 100%;
-  background-color: var(--white);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  transition: background 300ms ease-in-out;
   &_image {
     position: relative;
     background-size: cover;

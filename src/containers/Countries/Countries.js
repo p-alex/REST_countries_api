@@ -7,6 +7,7 @@ export default function Countries() {
   const data = useSelector((state) => state.data);
   const search = useSelector((state) => state.search);
   const filter = useSelector((state) => state.filter);
+  const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
   const [countryArray, setCountryArray] = useState([]);
   useEffect(() => {
@@ -45,7 +46,15 @@ export default function Countries() {
           );
         })
       ) : (
-        <p>No result.</p>
+        <p
+          style={
+            theme === "Light"
+              ? { color: "var(--white)" }
+              : { color: "var(--darkBlue)" }
+          }
+        >
+          No result.
+        </p>
       )}
     </div>
   );

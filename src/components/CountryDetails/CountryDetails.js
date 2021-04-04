@@ -10,6 +10,7 @@ export default function CountryDetails({ country }) {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const borders = useSelector((state) => state.borders);
+  const theme = useSelector((state) => state.theme);
   const [countryborders, setCountryBorders] = useState("");
   useEffect(() => {
     dispatch(fetchOne(country));
@@ -41,7 +42,14 @@ export default function CountryDetails({ country }) {
           <div className="countryDetails_flag">
             <img src={data[0].flag} alt={data[0].name} />
           </div>
-          <div className="countryDetails_content">
+          <div
+            className="countryDetails_content"
+            style={
+              theme === "Light"
+                ? { color: "var(--veryLightWhite)" }
+                : { color: "var(--veryDarkBlueText)" }
+            }
+          >
             <h1>{country}</h1>
             <div className="countryDetails_contentContainer">
               <ul style={{ marginRight: "80px" }}>
@@ -83,7 +91,22 @@ export default function CountryDetails({ country }) {
                   borders.map((item) => {
                     return (
                       <li key={item.name}>
-                        <Link to={`/${item.name}`}>{item.name}</Link>
+                        <Link
+                          to={`/${item.name}`}
+                          style={
+                            theme === "Light"
+                              ? {
+                                  background: "var(--darkBlue)",
+                                  color: "var(--white)",
+                                }
+                              : {
+                                  background: "var(--white)",
+                                  color: "var(--darkBlue)",
+                                }
+                          }
+                        >
+                          {item.name}
+                        </Link>
                       </li>
                     );
                   })
