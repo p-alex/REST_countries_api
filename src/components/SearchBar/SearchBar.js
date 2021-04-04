@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { searchQuery } from "../../actions/search";
+import { resetQuery, searchQuery } from "../../actions/search";
 import "./SearchBar.scss";
 export default function SearchBar() {
+  useEffect(() => {
+    return () => {
+      dispatch(resetQuery());
+    };
+  });
   const dispatch = useDispatch();
   const handleChange = (e) => {
     let value = e.target.value;

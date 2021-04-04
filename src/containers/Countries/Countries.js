@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Countries.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchAll } from "../../actions/data";
+import { fetchAll, resetData } from "../../actions/data";
 import CountryCard from "../../components/CountryCard/CountryCard";
 export default function Countries() {
   const data = useSelector((state) => state.data);
@@ -11,6 +11,9 @@ export default function Countries() {
   const [countryArray, setCountryArray] = useState([]);
   useEffect(() => {
     dispatch(fetchAll());
+    return () => {
+      dispatch(resetData());
+    };
   }, [dispatch]);
   useEffect(() => {
     let updatedData = data.filter((country) => {

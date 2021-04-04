@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CountryCard.scss";
 export default function CountryCard({
   name,
@@ -9,10 +10,13 @@ export default function CountryCard({
 }) {
   return (
     <div className="card">
-      <div
-        className="card_image"
-        style={{ backgroundImage: `url('${flag}')` }}
-      ></div>
+      <Link to={`/${name}`}>
+        <div
+          className="card_image"
+          style={{ backgroundImage: `url('${flag}')` }}
+        ></div>
+      </Link>
+
       <div className="card_content">
         <div className="card_title">
           <h2>{name}</h2>

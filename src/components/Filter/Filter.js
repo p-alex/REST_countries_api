@@ -6,14 +6,14 @@ export default function Filter() {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
   const [isActive, setIsActive] = useState(false);
-  const [filterOptions, setFilterOptions] = useState([
+  const filterOptions = [
     "All",
     "Africa",
     "Americas",
     "Asia",
     "Europe",
     "Oceania",
-  ]);
+  ];
   const handleOption = (option) => {
     dispatch(setFilterOption(option));
   };
