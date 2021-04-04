@@ -6,9 +6,10 @@ export default function BackBtn() {
   const theme = useSelector((state) => state.theme);
   const history = useHistory();
   return (
-    <div className="backBtn_container" onClick={() => history.push("/")}>
+    <div className="backBtn_container">
       <div
         className="backBtn"
+        onClick={() => history.push("/")}
         style={
           theme === "Light"
             ? { background: "var(--darkBlue)", color: "var(--white)" }
