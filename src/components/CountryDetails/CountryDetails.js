@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BackBtn from "../BackBtn/BackBtn";
+import Loader from "../../ui/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOne, resetData } from "../../actions/data";
 import { Link } from "react-router-dom";
@@ -87,7 +88,7 @@ export default function CountryDetails({ country }) {
                     );
                   })
                 ) : (
-                  <p>Loading...</p>
+                  <Loader />
                 )}
               </ul>
             </div>
@@ -95,7 +96,7 @@ export default function CountryDetails({ country }) {
         </main>
       ) : (
         <center>
-          <p>Loading...</p>
+          <Loader />
         </center>
       )}
     </>
