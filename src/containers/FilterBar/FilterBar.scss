@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: var(--desktopContainer);
-  margin: 20px auto;
+  margin: 50px auto;
   @media (min-width: 1921px) {
     width: var(--biggerContainer);
   }
@@ -11,5 +11,6 @@
   }
   @media (max-width: 800px) {
     flex-direction: column;
+    margin: 20px auto;
   }
 }

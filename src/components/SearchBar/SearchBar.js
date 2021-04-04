@@ -31,6 +31,11 @@ export default function SearchBar() {
         type="text"
         placeholder="Search for a country..."
         onChange={handleChange}
+        style={
+          theme === "Light"
+            ? { color: "var(--white)" }
+            : { color: "var(--darkBlue)" }
+        }
       />
     </div>
   );
