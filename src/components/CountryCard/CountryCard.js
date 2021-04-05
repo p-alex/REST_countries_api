@@ -19,7 +19,7 @@ export default function CountryCard({
           : { background: "var(--white)", color: "var(--darkBlue)" }
       }
     >
-      <Link to={`/${name}`}>
+      <Link to={`/${name.replace(" ", "-")}`}>
         <div
           className="card_image"
           style={{ backgroundImage: `url('${flag}')` }}

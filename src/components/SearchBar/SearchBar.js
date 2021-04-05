@@ -27,16 +27,19 @@ export default function SearchBar() {
       }
     >
       <i className="fas fa-search"></i>
-      <input
-        type="text"
-        placeholder="Search for a country..."
-        onChange={handleChange}
-        style={
-          theme === "Light"
-            ? { color: "var(--white)" }
-            : { color: "var(--darkBlue)" }
-        }
-      />
+      <label>
+        <input
+          type="text"
+          placeholder="Search for a country..."
+          onChange={handleChange}
+          name="search"
+          style={
+            theme === "Light"
+              ? { color: "var(--white)" }
+              : { color: "var(--darkBlue)" }
+          }
+        />
+      </label>
     </div>
   );
 }
