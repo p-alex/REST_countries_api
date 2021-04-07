@@ -13,7 +13,7 @@ export default function CountryDetails({ country }) {
   const theme = useSelector((state) => state.theme);
   const [countryborders, setCountryBorders] = useState("");
   useEffect(() => {
-    dispatch(fetchOne(country.replace("-", " ")));
+    dispatch(fetchOne(country.split("-").join(" ")));
     return () => {
       dispatch(resetData());
     };
@@ -50,7 +50,7 @@ export default function CountryDetails({ country }) {
                 : { color: "var(--veryDarkBlueText)" }
             }
           >
-            <h1>{country.replace("-", " ")}</h1>
+            <h1>{country.split("-").join(" ")}</h1>
             <div className="countryDetails_contentContainer">
               <ul style={{ marginRight: "80px" }}>
                 <li>

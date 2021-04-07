@@ -18,12 +18,15 @@ export default function CountryCard({
           ? { background: "var(--darkBlue)", color: "var(--white)" }
           : { background: "var(--white)", color: "var(--darkBlue)" }
       }
+      id={name.split(" ").join("")}
     >
-      <Link to={`/${name.replace(" ", "-")}`}>
+      <Link to={`/${name.split(" ").join("-")}`}>
         <div
           className="card_image"
           style={{ backgroundImage: `url('${flag}')` }}
-        ></div>
+        >
+          <span>image</span>
+        </div>
       </Link>
 
       <div className="card_content">
